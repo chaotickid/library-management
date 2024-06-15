@@ -16,6 +16,15 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    screens: { // <- change screens first
+      sm: '640px',
+      md: '768px',
+      lg: '960px',
+      xl: '1200px',
+    },
+    fontFamily: { // <- add font family as primary font
+      primary: "var(--font-jetbrainsMono)"
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
