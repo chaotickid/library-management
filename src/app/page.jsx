@@ -43,7 +43,7 @@ export function ButtonGhost({ name }) {
 
 import { Input } from "@/components/ui/input"
 
-export function DropdownMenuRadioGroupDemo({actioName, actionList}) {
+export function DropdownMenuRadioGroupDemo({ actioName, actionList }) {
   const [position, setPosition] = useState("bottom")
 
   return (
@@ -55,10 +55,10 @@ export function DropdownMenuRadioGroupDemo({actioName, actionList}) {
         <DropdownMenuLabel>Available Search Options</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-          {actionList.map((item, index)=>{
-            return(
+          {actionList.map((item, index) => {
+            return (
               <div key={index}>
-                  <DropdownMenuRadioItem value={item.value}>{item.option}</DropdownMenuRadioItem>
+                <DropdownMenuRadioItem value={item.value}>{item.option}</DropdownMenuRadioItem>
               </div>
             )
           })}
@@ -104,35 +104,35 @@ export default function Home() {
   const [defaultThisWeek, setDefaultThisWeek] = useState("this week")
 
   const actionListForUserSearch = [
-     { 
+    {
       id: 1,
       option: "Search By User Id",
       value: "id"
-     },
-     { 
+    },
+    {
       id: 2,
       option: "Search By User Name",
-      value: "userNmae" 
-     }
+      value: "userNmae"
+    }
   ]
 
   const actionListForBookSearch = [
-    { 
-     id: 1,
-     option: "Search By Book Id",
-     value: "id"
+    {
+      id: 1,
+      option: "Search By Book Id",
+      value: "id"
     },
-    { 
-     id: 2,
-     option: "Search By Book Title",
-     value: "title" 
+    {
+      id: 2,
+      option: "Search By Book Title",
+      value: "title"
     },
-    { 
+    {
       id: 3,
       option: "Search By Book Author",
-      value: "author" 
-     }
- ]
+      value: "author"
+    }
+  ]
 
   const listOfAccountManagamentTab = [
     {
@@ -193,7 +193,7 @@ export default function Home() {
       <div className="border rounded-xl mt-10 p-5">
         <h1 className="font-bold">Top Choices</h1>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center">
           <CarouselSize></CarouselSize>
         </div>
       </div>
@@ -263,7 +263,7 @@ export default function Home() {
         <div className="ml-2  mb-2 flex justify-between gap-80">
           <ButtonGhost name={"Add Book"} ></ButtonGhost>
           <div className="flex gap-5">
-          <DropdownMenuRadioGroupDemo actioName="Advance Search Options" actionList={actionListForBookSearch}></DropdownMenuRadioGroupDemo>
+            <DropdownMenuRadioGroupDemo actioName="Advance Search Options" actionList={actionListForBookSearch}></DropdownMenuRadioGroupDemo>
             <Input type="email" placeholder="Search book by title" />
             <ButtonGhost name={"Search"} ></ButtonGhost>
           </div>
